@@ -6,3 +6,4 @@ export const studentin = {
   gender: "male", // male or female
   studentid: "test", // free
 };
+export const m1 = "유경환";
