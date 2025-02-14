@@ -1,20 +1,12 @@
-import React, { useState } from "react";
-import "./database.js";
+import React from "react";
+import StuForm from "./CMS/StuForm.jsx";
+import StuItem from "./CMS/StuItem";
 
 const App = () => {
-  const [stu, setStu] = useState([]);
-
-  const onUpdate = () => {};
-  const onDelete = () => {};
-
   return (
     <div>
-      App
-      <form action="">
-        <input type="text" />
-        <button>수정</button>
-        <button>삭제</button>
-      </form>
+      <StuForm />
+      <StuItem />
     </div>
   );
 };
