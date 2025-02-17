@@ -105,9 +105,11 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
         />
       </div>
       <button>{isEditing ? "수정" : "가입"}</button>
-      <button onClick={onCancel} type="button">
-        취소
-      </button>
+      {isEditing && (
+        <button onClick={onCancel} type="button">
+          취소
+        </button>
+      )}
     </form>
   );
 };
@@ -122,3 +124,5 @@ StuForm.propTypes = {
   payload: PropTypes.object,
   onCancel: PropTypes.func,
 };
+
+// dfs
