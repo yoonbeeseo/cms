@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { studentin } from "../database";
 import PropTypes from "prop-types";
+import { v4 } from "uuid";
 
 const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
   const [user, setUser] = useState(
@@ -46,6 +47,7 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
       };
       if (foundUser) {
         alert("중복된 이름입니다");
+        return;
       }
     }
 
@@ -57,7 +59,7 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
           copy[index] = user;
         }
       } else {
-        copy.push({ ...user, studentid });
+        copy.push({ ...user, studentid: v4() });
       }
       return copy;
     });
