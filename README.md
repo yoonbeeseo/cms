@@ -43,10 +43,10 @@
 6. 해당 폼을 추가 뿐만 아니라 수정할 때도 사용할 수 있도록 확장합니다.
 7. 추가 로직 구현
 
-# Container : ---
+# Container : 김영화
 
-ss
 
+<<<<<<< HEAD
 # ItemComponent : ---
 
 # FormComponent : Main/ --- Sub/ ---
@@ -78,3 +78,5 @@ m1:ykh
 5. 컴포넌트 수행 내용을 작성한 RREADME.md 파일이 있으면 좋음
 
 6.작업 내용을 정확하게 지시하는게 중요함
+=======
+>>>>>>> 8fe254449afe94a79e11abef3ac2db3f0905313e
