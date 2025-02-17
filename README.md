@@ -44,7 +44,3 @@
 7. 추가 로직 구현
 
 # Container : 김영화
-
-# ItemComponent : 강찬희
-
-# FormComponent : Main/ 유경환 Sub/ 김영화
