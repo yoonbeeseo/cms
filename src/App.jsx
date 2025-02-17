@@ -8,21 +8,9 @@ const App = () => {
 
   return (
     <div>
-      <StuForm setUsers={setUsers} users={users} />
+      <StuForm />
 
-      <ul>
-        {users.map((user, index) => {
-          return (
-            <StuItem
-              key={user.studentid}
-              index={index}
-              user={user}
-              users={users}
-              setUsers={setUsers}
-            />
-          );
-        })}
-      </ul>
+      <StuItem />
     </div>
   );
 };
