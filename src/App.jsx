@@ -1,15 +1,14 @@
+import React from "react";
 import StuForm from "./CMS/StuForm.jsx";
 import StuItem from "./CMS/StuItem";
-import { studentin } from "./database.js";
 import { useState } from "react";
 
 const App = () => {
-  const [users, setUsers] = useState([studentin]);
+  const [users, setUsers] = useState([]);
 
   return (
     <div>
-      <StuForm setUsers={setUsers} users={users} />
-
+      <StuForm />
       <ul>
         {users.map((user, index) => {
           return (
@@ -23,8 +22,8 @@ const App = () => {
           );
         })}
       </ul>
+      <StuForm setUsers={setUsers} users={users} />
+      <StuItem />
     </div>
   );
 };
-
-export default App;
