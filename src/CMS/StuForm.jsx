@@ -50,9 +50,7 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
 
     // 중복 값 체크: 이름이 이미 존재하는지 확인
     if (!isEditing) {
-      const foundUser = () => {
-        setUsers((u) => u.name === user.name); // 기존 사용자 목록에서 동일한 이름이 있는지 체크
-      };
+      const foundUser = users.find((u) => u.email === user.email);
       if (foundUser) {
         alert("중복된 이름입니다");
         return;
