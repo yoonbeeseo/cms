@@ -45,6 +45,4 @@
 
 # Container : 김영화
 
-# ItemComponent : 강찬희
 
-# FormComponent : Main/ 유경환 Sub/ 김영화
