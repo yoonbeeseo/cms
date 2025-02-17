@@ -6,7 +6,7 @@ const StuForm = () => {
         App
         <form action="">
           <input type="text" />
-          <button>수정sdf</button>
+          <button>수정</button>
           <button>삭제</button>
         </form>
       </div>
