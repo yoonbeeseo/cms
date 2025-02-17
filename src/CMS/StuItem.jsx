@@ -25,7 +25,7 @@ const StuItem = ({ index, user, setUsers, users }) => {
       {/* {index + 1}. {users.name}, {users.age}, {users.tel}
       <button onClick={editUser}>수정</button>
       <button onClick={onDelete}>삭제</button> */}
-      {user.name} {user.birth} {user.tel}
+      {/* {user.name} {user.birth} {user.tel} */}
     </li>
   );
 };
