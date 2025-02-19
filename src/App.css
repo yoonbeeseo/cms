@@ -1,0 +1,13 @@
+.title {
+  background-color: blueviolet;
+  color: black;
+  width: 120px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  position: flex;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 40px;
+  margin-bottom: 40px;
+}
