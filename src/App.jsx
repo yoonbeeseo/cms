@@ -6,6 +6,7 @@ import "./App.css";
 
 const App = () => {
   const [users, setUsers] = useState([studentin]);
+  const [users, setUsers] = useState([studentin]);
 
   return (
     <div>

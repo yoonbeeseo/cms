@@ -1,12 +1,12 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
+import UserForm from "./StuForm";
 
 const StuItem = ({ index, user, setUsers, users }) => {
   const [isEdiitng, setIsEdiitng] = useState(false);
   const editUser = () => {
     setIsEdiitng((prev) => !prev);
   };
-
   const onDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
       setUsers((prev) =>
@@ -22,10 +22,30 @@ const StuItem = ({ index, user, setUsers, users }) => {
 
   return (
     <li>
-      {/* {index + 1}. {users.name}, {users.age}, {users.tel}
-      <button onClick={editUser}>수정</button>
-      <button onClick={onDelete}>삭제</button> */}
-      {/* {user.name} {user.birth} {user.tel} */}
+      {isEdiitng ? (
+        <UserForm
+          onCancel={editUser}
+          setUsers={setUsers}
+          isEditing={isEdiitng}
+          users={users}
+          payload={user}
+        />
+      ) : (
+        <>
+          <div>img</div>
+          <div>학생{index + 1}</div>
+          <div>
+            {user.name}
+            {user.gender}
+            {user.birth}
+            {user.address}
+            {user.tel}
+            <p>ID: 00000{index + 1}</p>
+          </div>
+          <button onClick={editUser}>수정</button>
+          <button onClick={onDelete}>삭제</button>
+        </>
+      )}
     </li>
   );
 };
@@ -37,5 +57,5 @@ StuItem.propTypes = {
   index: PropTypes.number,
   setUsers: PropTypes.func,
   isEdiitng: PropTypes.bool,
-  payload: PropTypes.object,
+  // payload: PropTypes.object,
 };
