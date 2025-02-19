@@ -2,12 +2,14 @@ import StuForm from "./CMS/StuForm.jsx";
 import StuItem from "./CMS/StuItem";
 import { useState } from "react";
 import { studentin } from "./database.js";
+import "./app.css";
 
 const App = () => {
   const [users, setUsers] = useState([studentin]);
 
   return (
     <div>
+      <div id="CMS">CMS</div>
       <StuForm />
       <ul>
         {users.map((user, index) => {
