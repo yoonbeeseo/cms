@@ -6,6 +6,11 @@ const StuItem = ({ index, user, setUsers, users }) => {
   const [isEdiitng, setIsEdiitng] = useState(false);
   const editUser = () => {
     setIsEdiitng((prev) => !prev);
+    if (confirm("수정하시겠습니까?")) {
+      return;
+    } else {
+      alert("최소되었습니다.");
+    }
   };
   const onDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
@@ -32,18 +37,24 @@ const StuItem = ({ index, user, setUsers, users }) => {
         />
       ) : (
         <>
-          <div>img</div>
-          <div>학생{index + 1}</div>
           <div>
-            {user.name}
-            {user.gender}
-            {user.birth}
-            {user.address}
-            {user.tel}
-            <p>ID: 00000{index + 1}</p>
+            <div id="itemDivImg">img</div>
+            <div id="itemDivStu">학생{index + 1}</div>
           </div>
-          <button onClick={editUser}>수정</button>
-          <button onClick={onDelete}>삭제</button>
+          <div id="itemDivData">
+            <div>
+              {user.name}
+              {user.gender}
+              {user.birth}
+            </div>
+            <div>
+              <p>{user.address}</p>
+              <p>{user.tel}</p>
+              <p>ID: 00000{index + 1}</p>
+            </div>
+            <button onClick={editUser}>수정</button>
+            <button onClick={onDelete}>삭제</button>
+          </div>
         </>
       )}
     </li>

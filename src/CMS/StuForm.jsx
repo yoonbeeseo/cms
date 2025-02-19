@@ -77,7 +77,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} id="form">
       <div>
         <label htmlFor="name">이름</label>
         <input
