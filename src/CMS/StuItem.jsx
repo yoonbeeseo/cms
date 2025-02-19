@@ -3,9 +3,9 @@ import { useState } from "react";
 import UserForm from "./StuForm";
 
 const StuItem = ({ index, user, setUsers, users }) => {
-  const [isEdiitng, setIsEdiitng] = useState(false);
+  const [isEditing, setIsEditing] = useState(false);
   const editUser = () => {
-    setIsEdiitng((prev) => !prev);
+    setIsEditing((prev) => !prev);
     if (confirm("수정하시겠습니까?")) {
       return;
     } else {
@@ -27,11 +27,11 @@ const StuItem = ({ index, user, setUsers, users }) => {
 
   return (
     <li>
-      {isEdiitng ? (
+      {isEditing ? (
         <UserForm
           onCancel={editUser}
           setUsers={setUsers}
-          isEditing={isEdiitng}
+          isEditing={isEditing}
           users={users}
           payload={user}
         />
@@ -67,6 +67,6 @@ StuItem.propTypes = {
   user: PropTypes.object,
   index: PropTypes.number,
   setUsers: PropTypes.func,
-  isEdiitng: PropTypes.bool,
+  isEditing: PropTypes.bool,
   // payload: PropTypes.object,
 };

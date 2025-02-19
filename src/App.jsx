@@ -9,6 +9,7 @@ const App = () => {
 
   return (
     <div>
+      <div id="CMS">CMS</div>
       <StuForm />
       <ul>
         {users.map((user, index) => {
