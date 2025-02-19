@@ -1,26 +1,6 @@
-# 변수명
+# 폼의 위치
 
-App.jsx
-users 배열
-
-# item
-
-받아올 값
-
-itemUser 변수명으로 받아오기 (오브젝트로)
-
-index,
-itemUsers(배열, 중복검사) ,
-
-# form
-
-받아올 값
-
-users(배열, 중복검사),
-
-setUsers 함수(추가, 수정),
-
-payload 오브젝트(수정용),
-
-isEditing(불리언타입, 수정),
-onCancel 함수(취소)
+폼의 위치
+학생들 그려줄 위치
+학생을 담을 그릇 변수 명 정한 이유
+틀 반응형 대응 할지 안할지
