@@ -40,10 +40,6 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
       alert("전화번호를 입력하세요");
       return;
     }
-    if (user.gender.length === 0) {
-      alert("성별을 입력하세요");
-      return;
-    }
 
     if (!isEditing) {
       const foundUser = users.find((u) => u.name === user.name);
@@ -110,17 +106,60 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
       </div>
       <div>
         <label htmlFor="tel">전화번호</label>
-        <input type="text" name="tel" value={user.tel} onChange={onChange} />
-      </div>
-      <div>
-        <label htmlFor="gender">성별</label>
         <input
+          type="text"
+          name="tel"
+          value={user.tel}
+          onChange={onChange}
+          placeholder="010-xxxx-xxxx 형식으로 입력"
+        />
+      </div>
+      <div
+        style={{
+          width: "410px",
+        }}
+      >
+        <label htmlFor="gender">성별</label>
+        {/* <input
           type="text"
           name="gender"
           value={user.gender}
           onChange={onChange}
           placeholder="남과 여 둘중하나만 적으세요"
-        />
+        /> */}
+        <select
+          name=""
+          id=""
+          style={{
+            padding: 15,
+            width: 280,
+            borderRadius: 5,
+            borderColor: "red",
+          }}
+        >
+          <option value="">남</option>
+          <option value="">여</option>
+        </select>
+      </div>
+      <div
+        style={{
+          width: "410px",
+        }}
+      >
+        <label htmlFor="">재직여부</label>
+        <select
+          name=""
+          id=""
+          style={{
+            padding: 15,
+            width: 280,
+            borderRadius: 5,
+            borderColor: "red",
+          }}
+        >
+          <option value="">다니는중</option>
+          <option value="">그만둠</option>
+        </select>
       </div>
       <button className="update">{isEditing ? "수정" : "가입"}</button>
       {isEditing && (
