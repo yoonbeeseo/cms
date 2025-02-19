@@ -1,9 +1,10 @@
 import StuForm from "./CMS/StuForm.jsx";
 import StuItem from "./CMS/StuItem";
 import { useState } from "react";
+import { studentin } from "./database.js";
 
 const App = () => {
-  const [users, setUsers] = useState([]);
+  const [users, setUsers] = useState([studentin]);
 
   return (
     <div>
@@ -21,8 +22,6 @@ const App = () => {
           );
         })}
       </ul>
-      <StuForm setUsers={setUsers} users={users} />
-      <StuItem />
     </div>
   );
 };
