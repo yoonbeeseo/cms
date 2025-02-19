@@ -1,9 +1,8 @@
-import { useState } from "react";
-
 import PropTypes from "prop-types";
+import { useRef, useState } from "react";
 import { v4 } from "uuid";
 
-const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
+const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   const [user, setUser] = useState(
     payload ?? {
       name: "",
@@ -14,6 +13,9 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
       studentid: "",
     }
   );
+
+  const nameref = useRef(null);
+
   const onChange = (e) => {
     setUser((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
@@ -22,6 +24,7 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
     e.preventDefault();
     if (user.name.length === 0) {
       alert("이름을 입력하세요");
+      nameref.current.focus();
       return;
     }
     if (user.address.length === 0) {
@@ -43,25 +46,30 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
 
     if (!isEditing) {
       const foundUser = users.find((u) => u.name === user.name);
+
       if (foundUser) {
-        alert("중복된 이름입니다");
+        alert("중복된 이름입니다.");
+        return;
       }
     }
 
     setUsers((prev) => {
       let copy = [...prev];
-      if (!isEditing) {
+      if (isEditing) {
         const index = users.findIndex((u) => u.studentid === payload.studentid);
+
         if (index >= 0) {
           copy[index] = user;
         }
       } else {
         copy.push({ ...user, studentid: v4() });
       }
+
       return copy;
     });
 
     alert(isEditing ? "수정" : "가입");
+
     if (isEditing && onCancel) {
       onCancel();
     }
@@ -71,7 +79,13 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
     <form onSubmit={onSubmit}>
       <div>
         <label htmlFor="name">이름</label>
-        <input type="text" name="name" value={user.name} onChange={onChange} />
+        <input
+          type="text"
+          name="name"
+          value={user.name}
+          onChange={onChange}
+          ref={nameref}
+        />
       </div>
       <div>
         <label htmlFor="address">주소</label>
@@ -105,18 +119,20 @@ const StuForm = ({ payload, setUsers, users, isEditing, onCancel }) => {
         />
       </div>
       <button>{isEditing ? "수정" : "가입"}</button>
-      <button onClick={onCancel} type="button">
-        취소
-      </button>
+      {isEditing && (
+        <button onClick={onCancel} type="button">
+          취소
+        </button>
+      )}
     </form>
   );
 };
 
-export default StuForm;
+export default UserForm;
 
-StuForm.propTypes = {
+UserForm.propTypes = {
   users: PropTypes.array,
-  setUsers: PropTypes.func,
+  setUsers: PropTypes.func, // 기본
 
   isEditing: PropTypes.bool,
   payload: PropTypes.object,
