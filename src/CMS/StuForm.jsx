@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import { useRef, useState } from "react";
 import { v4 } from "uuid";
+import "./StuForm.css";
 
 const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   const [user, setUser] = useState(
@@ -85,6 +86,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           value={user.name}
           onChange={onChange}
           ref={nameref}
+          className="nameup"
         />
       </div>
       <div>
@@ -103,6 +105,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           name="birth"
           value={user.birth}
           onChange={onChange}
+          placeholder="2000-01-01형식"
         />
       </div>
       <div>
@@ -116,13 +119,16 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           name="gender"
           value={user.gender}
           onChange={onChange}
+          placeholder="남과 여 둘중하나만 적으세요"
         />
       </div>
-      <button>{isEditing ? "수정" : "가입"}</button>
+      <button className="update">{isEditing ? "수정" : "가입"}</button>
       {isEditing && (
-        <button onClick={onCancel} type="button">
-          취소
-        </button>
+        <div className="form-buttons">
+          <button onClick={onCancel} type="button" className="onCanCel">
+            취소
+          </button>
+        </div>
       )}
     </form>
   );
