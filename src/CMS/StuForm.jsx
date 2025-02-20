@@ -3,7 +3,7 @@ import { useRef, useState } from "react";
 import { v4 } from "uuid";
 import "./StuForm.css";
 
-const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
+const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   const [user, setUser] = useState(
     payload ?? {
       name: "",
@@ -120,13 +120,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
         }}
       >
         <label htmlFor="gender">성별</label>
-        {/* <input
-          type="text"
-          name="gender"
-          value={user.gender}
-          onChange={onChange}
-          placeholder="남과 여 둘중하나만 적으세요"
-        /> */}
+
         <select
           name=""
           id=""
@@ -173,9 +167,9 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   );
 };
 
-export default UserForm;
+export default StuForm;
 
-UserForm.propTypes = {
+StuForm.propTypes = {
   users: PropTypes.array,
   setUsers: PropTypes.func, // 기본
 

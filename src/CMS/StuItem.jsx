@@ -14,11 +14,7 @@ const StuItem = ({ index, user, setUsers, users }) => {
   };
   const onDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
-      setUsers((prev) =>
-        prev.filter(() => {
-          (u) => u.id !== user.id;
-        })
-      );
+      setUsers((prev) => prev.filter((u) => u.studentid !== user.studentid));
       alert("삭제되었습니다. ");
     } else {
       alert("최소되었습니다.");
