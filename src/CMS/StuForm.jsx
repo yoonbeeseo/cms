@@ -10,7 +10,8 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
       address: "",
       birth: "",
       tel: "",
-      gender: "",
+      gender: "male", // 기본 값으로 "male" 설정
+      status: "재직중", // 기본 값으로 "재직중" 설정
       studentid: "",
     }
   );
@@ -122,8 +123,9 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
         <label htmlFor="gender">성별</label>
 
         <select
-          name=""
-          id=""
+          name="gender" // gender 필드
+          value={user.gender} // user.gender로 value 설정
+          onChange={onChange} // onChange에서 상태 업데이트
           style={{
             padding: 15,
             width: 280,
@@ -131,8 +133,8 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
             borderColor: "red",
           }}
         >
-          <option value="">남</option>
-          <option value="">여</option>
+          <option value="male">남</option>
+          <option value="female">여</option>
         </select>
       </div>
       <div
@@ -140,10 +142,11 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           width: "410px",
         }}
       >
-        <label htmlFor="">재직여부</label>
+        <label htmlFor="status">재직여부</label>
         <select
-          name=""
-          id=""
+          name="status" // status 필드
+          value={user.status} // user.status로 value 설정
+          onChange={onChange} // onChange에서 상태 업데이트
           style={{
             padding: 15,
             width: 280,
@@ -151,8 +154,8 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
             borderColor: "red",
           }}
         >
-          <option value="">재직중</option>
-          <option value="">그만둠</option>
+          <option value="재직중">재직중</option>
+          <option value="그만둠">그만둠</option>
         </select>
       </div>
       <button className="update">{isEditing ? "수정" : "가입"}</button>
