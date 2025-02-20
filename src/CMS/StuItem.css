@@ -12,7 +12,8 @@
 }
 #itemDivFir {
   display: flex;
-  margin: 10px;
+  width: 100%;
+  flex: 1;
 }
 #itemDivLeft {
   display: flex;
@@ -22,6 +23,8 @@
 }
 li {
   list-style-type: none;
+  flex: 1;
+  width: 100%;
   display: flex;
 }
 
@@ -42,6 +45,7 @@ li {
   margin: 0 10px;
   display: flex;
   flex-direction: column;
+  flex: 1;
 }
 #itemDivData button {
   width: 50px;
