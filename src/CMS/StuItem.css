@@ -12,6 +12,7 @@
 }
 #itemDivFir {
   display: flex;
+  margin: 10px;
 }
 #itemDivLeft {
   display: flex;
