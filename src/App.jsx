@@ -10,7 +10,7 @@ const App = () => {
   return (
     <div>
       <div id="CMS">CMS</div>
-      <StuForm />
+      <StuForm users={users} setUsers={setUsers} />
       <ul>
         {users.map((user, index) => {
           return (

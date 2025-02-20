@@ -6,12 +6,6 @@ import "./StuItem.css";
 const StuItem = ({ index, user, setUsers, users }) => {
   const [isEditing, setIsEditing] = useState(false);
 
-  const [isControl, setIsControl] = useState(false);
-
-  const editControl = () => {
-    setIsControl((prev) => !prev);
-  };
-
   const editUser = () => {
     setIsEditing((prev) => !prev);
     if (confirm("수정하시겠습니까?")) {
@@ -23,11 +17,7 @@ const StuItem = ({ index, user, setUsers, users }) => {
 
   const onDelete = () => {
     if (confirm("삭제하시겠습니까?")) {
-      setUsers((prev) =>
-        prev.filter(() => {
-          (u) => u.id !== user.id;
-        })
-      );
+      setUsers((prev) => prev.filter((u) => u.studentid !== user.studentid));
       alert("삭제되었습니다. ");
     } else {
       alert("최소되었습니다.");
