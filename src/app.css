@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #eef5ff;
+}
+.title h1 {
+  background: #9daaed;
+  color: black;
+  width: 200px;
+  height: 50px;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  margin: 40px auto;
+  border-radius: 40px;
+}
+.con {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.stu {
+  /* display: flex; */
+  display: grid;
+  row-gap: 20px;
+  margin-top: 30px;
+  padding: 20px;
+}
+/* 데스크탑 */
+@media screen and (min-width: 1200px) {
+  .stu {
+    row-gap: 50px;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+}

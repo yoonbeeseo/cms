@@ -44,17 +44,21 @@ const StuItem = ({ index, user, setUsers, users }) => {
           <div id="itemDivData">
             <div id="itemDivTop">
               <p> {user.name}</p>
-              <p> {user.gender}</p>
               <p> {user.birth}</p>
             </div>
             <div>
               <p>{user.address}</p>
               <p>{user.tel}</p>
               <p>ID: 00000{index + 1}</p>
+              <p>{user.status}</p>
             </div>
             <div id="itemDivbtn">
-              <button onClick={editUser}>수정</button>
-              <button onClick={onDelete}>삭제</button>
+              <button className="first" onClick={editUser}>
+                수정
+              </button>
+              <button className="last" onClick={onDelete}>
+                삭제
+              </button>
             </div>
           </div>
         </div>
