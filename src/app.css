@@ -1,4 +1,4 @@
-* {
+@media screen and (max-width: 1199px) * {
   margin: 0;
   padding: border-box;
 }
@@ -6,7 +6,7 @@
   background-color: blueviolet;
   color: black;
   width: 120px;
-  height: 50px;
+  height: 70px;
   justify-content: center;
   display: flex;
   text-align: center;
@@ -52,4 +52,10 @@ li {
 #itemDivData button {
   width: 50px;
   border-radius: 30px;
+}
+
+.stu {
+  margin-left: 40px;
+  display: flex;
+  justify-content: center;
 }
