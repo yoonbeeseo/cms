@@ -4,6 +4,7 @@ export const studentin = {
   birth: "99-01-16", // yymmdd
   tel: "010-1234-1234", // 01000000000
   studentid: "0000", // free
+  gender: "mail",
   status: "재직중",
 };
 export const m1 = "유경환";
