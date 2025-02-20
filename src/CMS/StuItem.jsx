@@ -51,6 +51,7 @@ const StuItem = ({ index, user, setUsers, users }) => {
               <p>{user.address}</p>
               <p>{user.tel}</p>
               <p>ID: 00000{index + 1}</p>
+              <p>{user.status}</p>
             </div>
             <div id="itemDivbtn">
               <button onClick={editUser}>수정</button>
