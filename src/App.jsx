@@ -5,7 +5,12 @@ import { studentin } from "./database.js";
 import "./App.css";
 
 const App = () => {
-  const [users, setUsers] = useState([studentin, studentin]);
+  const [users, setUsers] = useState([
+    studentin,
+    studentin,
+    studentin,
+    studentin,
+  ]);
 
   return (
     <>
