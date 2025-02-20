@@ -41,11 +41,11 @@ div input {
   margin-top: 20px; /* 버튼 위에 여백을 추가 */
 }
 
-button:hover {
+#form button:hover {
   color: white;
   scale: 1.3;
 }
-.form-buttons {
+#form .form-buttons {
   display: flex;
   gap: 10px; /* 버튼 간의 간격을 설정 */
 }

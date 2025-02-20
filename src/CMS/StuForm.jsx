@@ -73,7 +73,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
   };
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} id="form">
       <div>
         <label htmlFor="name">이름</label>
         <input
@@ -101,7 +101,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           name="birth"
           value={user.birth}
           onChange={onChange}
-          placeholder="2000-01-01형식"
+          placeholder="0000-00-00"
         />
       </div>
       <div>
@@ -111,7 +111,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           name="tel"
           value={user.tel}
           onChange={onChange}
-          placeholder="010-xxxx-xxxx 형식으로 입력"
+          placeholder="010-0000-0000"
         />
       </div>
       <div
@@ -157,7 +157,7 @@ const UserForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
             borderColor: "red",
           }}
         >
-          <option value="">다니는중</option>
+          <option value="">재직중</option>
           <option value="">그만둠</option>
         </select>
       </div>
