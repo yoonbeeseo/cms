@@ -1,6 +1,7 @@
-@media screen and (max-width: 1199px) * {
+@media screen and (max-width: 1199px) and(max-width:200px) * {
   margin: 0;
-  padding: border-box;
+  padding: 0;
+  box-sizing: border-box;
 }
 .title {
   background-color: blueviolet;
