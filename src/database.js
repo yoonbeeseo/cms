@@ -7,4 +7,4 @@ export const studentin = {
   gender: "mail",
   status: "재직중",
 };
-export const m1 = "유경환";
+export const stin = [];
