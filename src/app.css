@@ -8,6 +8,11 @@
   background: #9daaed;
   color: black;
   width: 200px;
+}
+.title {
+  background-color: blueviolet;
+  color: black;
+  width: 120px;
   height: 50px;
   justify-content: center;
   display: flex;
@@ -19,6 +24,7 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .stu {
   /* display: flex; */
   display: grid;
