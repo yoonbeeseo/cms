@@ -115,48 +115,42 @@ const StuForm = ({ users, setUsers, payload, isEditing, onCancel }) => {
           placeholder="010-0000-0000"
         />
       </div>
-      <div
-        style={{
-          width: "410px",
-        }}
-      >
-        <label htmlFor="gender">성별</label>
+      <div>
+        <div>
+          <label htmlFor="gender">성별</label>
 
-        <select
-          name="gender" // gender 필드
-          value={user.gender} // user.gender로 value 설정
-          onChange={onChange} // onChange에서 상태 업데이트
-          style={{
-            padding: 15,
-            width: 280,
-            borderRadius: 5,
-            borderColor: "red",
-          }}
-        >
-          <option value="male">남</option>
-          <option value="female">여</option>
-        </select>
-      </div>
-      <div
-        style={{
-          width: "410px",
-        }}
-      >
-        <label htmlFor="status">재직여부</label>
-        <select
-          name="status" // status 필드
-          value={user.status} // user.status로 value 설정
-          onChange={onChange} // onChange에서 상태 업데이트
-          style={{
-            padding: 15,
-            width: 280,
-            borderRadius: 5,
-            borderColor: "red",
-          }}
-        >
-          <option value="재직중">재직중</option>
-          <option value="그만둠">그만둠</option>
-        </select>
+          <select
+            name="gender" // gender 필드
+            value={user.gender} // user.gender로 value 설정
+            onChange={onChange} // onChange에서 상태 업데이트
+            style={{
+              padding: 15,
+              width: 280,
+              borderRadius: 5,
+              borderColor: "red",
+            }}
+          >
+            <option value="male">남</option>
+            <option value="female">여</option>
+          </select>
+        </div>
+        <div>
+          <label htmlFor="status">재직여부</label>
+          <select
+            name="status" // status 필드
+            value={user.status} // user.status로 value 설정
+            onChange={onChange} // onChange에서 상태 업데이트
+            style={{
+              padding: 15,
+              width: 280,
+              borderRadius: 5,
+              borderColor: "red",
+            }}
+          >
+            <option value="재직중">재직중</option>
+            <option value="그만둠">그만둠</option>
+          </select>
+        </div>
       </div>
       <button className="update">{isEditing ? "수정" : "가입"}</button>
       {isEditing && (

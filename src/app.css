@@ -8,17 +8,16 @@
   background: #9daaed;
   color: black;
   width: 200px;
+  border-radius: 40px;
 }
 .title {
-  background-color: blueviolet;
-  color: black;
   width: 120px;
   height: 50px;
+  color: black;
   justify-content: center;
   display: flex;
   text-align: center;
   margin: 40px auto;
-  border-radius: 40px;
 }
 .con {
   max-width: 1200px;

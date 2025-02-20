@@ -44,6 +44,7 @@ const StuItem = ({ index, user, setUsers, users }) => {
           <div id="itemDivData">
             <div id="itemDivTop">
               <p> {user.name}</p>
+              <p>{user.gender}</p>
               <p> {user.birth}</p>
             </div>
             <div>

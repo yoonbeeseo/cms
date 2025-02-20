@@ -27,6 +27,9 @@ div input {
   padding: 15px;
   width: 250px;
 }
+select {
+  max-width: 100px;
+}
 
 .update {
   width: 100px;
@@ -43,14 +46,15 @@ div input {
 
 #form button:hover {
   color: white;
-  scale: 1.3;
+  scale: 1.1;
+  transition: all 0.5s;
 }
 #form .form-buttons {
   display: flex;
   gap: 10px; /* 버튼 간의 간격을 설정 */
 }
 .onCanCel {
-  background: yellow;
+  background: rgb(78, 233, 86);
   padding: 10px;
   width: 100px;
   border: none;
