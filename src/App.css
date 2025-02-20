@@ -1,11 +1,16 @@
-@import "reset.css" .title {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.title {
   background-color: blueviolet;
   color: black;
   width: 120px;
   height: 50px;
   justify-content: center;
   align-items: center;
-  position: flex;
+  display: flex;
   text-align: center;
   margin: 0 auto;
   border-radius: 40px;
@@ -14,4 +19,9 @@
 .con {
   max-width: 1200px;
   margin: 0 auto;
+}
+.stu {
+  justify-content: center;
+  display: flex;
+  margin-left: 40px;
 }

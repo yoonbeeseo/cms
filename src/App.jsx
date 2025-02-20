@@ -5,7 +5,7 @@ import { studentin } from "./database.js";
 import "./App.css";
 
 const App = () => {
-  const [users, setUsers] = useState([studentin]);
+  const [users, setUsers] = useState([studentin, studentin]);
 
   return (
     <>
@@ -14,7 +14,7 @@ const App = () => {
       </div>
       <div className="con">
         <StuForm setUsers={setUsers} users={users} />
-        <ul>
+        <ul className="stu">
           {users.map((user, index) => {
             return (
               <StuItem
