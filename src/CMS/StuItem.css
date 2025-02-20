@@ -26,6 +26,8 @@ li {
   flex: 1;
   width: 100%;
   display: flex;
+  flex: 1;
+  width: 100%;
 }
 
 #itemDivImg {
@@ -54,10 +56,28 @@ li {
 
 #itemDivTop {
   display: flex;
-  justify-content: space-between;
+  column-gap: 20px;
   margin: 0;
 }
 #itemDivbtn {
   display: flex;
   justify-content: end;
+  column-gap: 5px;
+}
+#itemDivbtn .first {
+  background: lightgray;
+  color: darkblue;
+}
+#itemDivbtn .last {
+  background: tomato;
+  color: whitesmoke;
+}
+#itemDivbtn button {
+  padding: 8px;
+  border: none;
+}
+
+#itemDivbtn button:hover {
+  transform: scale(1.1);
+  transition: all 0.5s;
 }

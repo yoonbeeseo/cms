@@ -44,7 +44,6 @@ const StuItem = ({ index, user, setUsers, users }) => {
           <div id="itemDivData">
             <div id="itemDivTop">
               <p> {user.name}</p>
-              <p> {user.gender}</p>
               <p> {user.birth}</p>
             </div>
             <div>
@@ -54,8 +53,12 @@ const StuItem = ({ index, user, setUsers, users }) => {
               <p>{user.status}</p>
             </div>
             <div id="itemDivbtn">
-              <button onClick={editUser}>수정</button>
-              <button onClick={onDelete}>삭제</button>
+              <button className="first" onClick={editUser}>
+                수정
+              </button>
+              <button className="last" onClick={onDelete}>
+                삭제
+              </button>
             </div>
           </div>
         </div>
